@@ -5,12 +5,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Toms has broken it!\n"
+    return "Hello World!\n"
 
 
 @app.route('/<page_name>')
 def other_page(page_name):
-    response = make_response('ERROR: The page named %s does not exist. TA made this change'
+    response = make_response('ERROR: The page named %s does not exist.'
                              % page_name, 404)
     return response
 
